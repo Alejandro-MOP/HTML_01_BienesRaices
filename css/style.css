@@ -1,0 +1,645 @@
+/******************************************** FUNDAMENTOS CSS ************************************************/
+
+
+/*{
+---Para vincular un "id" de HTML a un estylo en CSS usamos "#nombre-id" 
+        #site-header{ background-color: blueviolet; }
+---Para vincular una "class" de HTML a un estilo en CSS usamos ".nombre-class" 
+        .encabezado { color: darkviolet; }
+---La diferencia entre "class" y "id":
+    "class" esta destinada para ser reutilizada.
+    "id" solo puede existir una asignación para un elemento en cada pagina, pueden existir varios "id" con diferentes nombres pero solo se utiliza uno por pagina 
+} */
+
+
+/******************************************** CSS PAGINA PRINCIPAL & ELEMENTOS TRANSVERSALES************************************************/
+
+html {
+    /*Aplicara esta clase para todo el documento HTML*/
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*Reset para REMS - 62.5% = 10px de 16px, remplazaremos pixeles por rems, que se adaptan mejor a cualquier dispositivo*/
+    /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    /*Aplicara esta clase a todo el body*/
+    font-family: 'Lato', sans-serif;
+    /*tipo de fuente que se usara en todo el body del documento*/
+    font-size: 1.6rem;
+    /*Tamaño de la letra*/
+    line-height: 2;
+    /*establece la altura de una casilla remarcada por líneas*/
+}
+
+
+/************************************************ Globales ********************************************/
+
+img {
+    max-width: 100%;
+    /*Indica que apesar del tamaño de la imagen esta se adaptara al tamaño del documento*/
+}
+
+.contenedor {
+    max-width: 120rem;
+    /*max-width: 1200px; Altura máxima 1200 pixeles*/
+    margin: 0 auto;
+    /*Margenes*/
+    width: 95%
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+
+/*Tamaño de letra para h1*/
+
+h2 {
+    font-size: 3.4rem;
+}
+
+
+/*Tamaño de letra para h2*/
+
+h3 {
+    font-size: 3rem;
+}
+
+
+/*Tamaño de letra para h3*/
+
+h4 {
+    font-size: 2.6rem;
+}
+
+
+/*Tamaño de letra para h4*/
+
+
+/************************************************ Utilidades ********************************************/
+
+.seccion {
+    margin-top: 2rem;
+    /*margen arriba*/
+    margin-bottom: 2rem;
+    /*margen por debajo*/
+}
+
+.fw-350 {
+    font-weight: 400;
+    /*Tamaño de letra*/
+}
+
+.centrar-texto {
+    text-align: center;
+    /*alineacion de texto*/
+}
+
+.d-block {
+    display: block!important;
+    /*ocupa todo el espacio disponible y "!important" genera una constante en todo el codigo de CSS*/
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+
+/************************************************ Botones ********************************************/
+
+.boton {
+    color: white;
+    /*color el boton*/
+    font-weight: 700;
+    /*tamaño de letra*/
+    text-decoration: none;
+    /*quita la linea del vinculo*/
+    font-size: 1.8rem;
+    /*negritas*/
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    /*margen*/
+    display: inline-block;
+    /*que tome todo el tamaño y no toma todo el espacio */
+    text-align: center;
+    display: block;
+    flex: 2 2 100%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover {
+    border: .005rem solid white;
+    /*borde color blanco*/
+    box-shadow: 0 .05rem 1.6rem 0 rgba(197, 194, 194, 0.24), 0 1rem 5rem 0 rgba(167, 165, 165, 0.671);
+    cursor: pointer;
+}
+
+.boton-amarillo {
+    background-color: #E08709;
+}
+
+.boton-verde {
+    background-color: #71b100;
+    margin: 1.5rem;
+}
+
+
+/************************************************ Header ********************************************/
+
+.site-header {
+    background-color: #333333;
+    padding: 1 rem 0 3rem 0;
+}
+
+.site-header.inicio {
+    background-image: url(../img/header.jpg);
+    /* "backgroud" es el fondo, "url" es para indicar donde esta la imagen "../carpeta"*/
+    background-position: center center;
+    /* muestra la posición en que queremos el fondo */
+    background-size: cover;
+    /*Fuerza las proporciones de la imagen para que se muestre en la pantalla*/
+    height: 100vh;
+    /* "height" es la altura de la imagen en vez de usa pixeles "100vh" adapta la imagen al tamaño de la pantalla*/
+    /* min-height: 600px; "min-height" indica que si el tamaño no es correcto posicionara minimo a tantos pixeles */
+    min-height: 60rem;
+}
+
+.contenido-heather {
+    height: 100%;
+    /* altura de 100% */
+    display: flex;
+    /*el div principal va a la siguiente línea, */
+    flex-direction: column;
+    /* la dirección hace que valla de arriba y abajo, solo los hijos de contenido heather*/
+    justify-content: space-between;
+    /*Justifica el contenido de esa div y crea un espacio entre ellos*/
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-heather {
+        text-align: left;
+    }
+}
+
+.contenido-heather h1 {
+    color: white;
+    padding-bottom: 3rem;
+    /*separacion hacia adentro del margen*/
+    max-width: 60rem;
+    /*corta la linea cuando detecta cierto espacio y genera una nueva*/
+    line-height: 4rem;
+    /*altura */
+}
+
+.barra {
+    padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        /* posiciona elementos uno frente a otro*/
+        justify-content: space-between;
+        /*genera un espacion en medio de los elementos //  alinea elementos en vertical*/
+        /*padding-top: 30px;*/
+        align-items: center;
+        /*alinea los elementos en el centro*/
+    }
+}
+
+
+/************************************************ Navegacion ********************************************/
+
+.navegacion a {
+    color: white;
+    /*color de la letra*/
+    text-decoration: none;
+    /* Quita la linea del vinculo */
+    /*font-size: 18px;    tamaño de letra*/
+    font-size: 2.2rem;
+    /*margin-right: 20px; margen del elemento la izquierda 20 px */
+    margin-right: 2rem;
+    font-family: 'Lato', sans-serif;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem;
+    }
+    .navegacion a:last-of-type {
+        /*selector para el ultimo elemento*/
+        margin: 0;
+        /*Margen en cero*/
+    }
+}
+
+.navegacion a:hover {
+    /*Cuando el mouse se posiciona sobre el vinculo, cambia de color*/
+    color: #71b100;
+}
+
+
+/************************************************ Navegacion Mobile********************************************/
+
+.mobile-menu img {
+    width: 5rem;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu img {
+        display: none;
+    }
+}
+
+.navegacion {
+    display: none;
+}
+
+.navegacion:target {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: block;
+    }
+}
+
+
+/************************************************ Iconos "Nosotros" ********************************************/
+
+@media (min-width: 768px) {
+    .iconos-contenedor {
+        display: flex;
+        /* posiciona elementos uno frente a otro*/
+        justify-content: space-between;
+    }
+}
+
+.icono {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+        /* divide el 100% de la seccion y los distribuye en 33.3%*/
+    }
+}
+
+.icono h3 {
+    text-transform: uppercase;
+}
+
+
+/************************************************ Anuncios ********************************************/
+
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /*que si distribulla en columnas*/
+    }
+}
+
+.anuncio {
+    /*border-width: 1px;       El tamaño del borde sera de 1px
+    border-style: solid;   borde sera una linea solida
+    border-color: #b5b5b5; el borde sera color gris */
+    border: 1px solid #B5B5B5;
+    /*Podemso agregar las tres propiedades del borde en una sola linea respetanto el orden: tamaño, estilo y color*/
+    background-color: #F5F5F5;
+    /*Color de fondo*/
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .anuncio {
+        flex-grow: 0;
+        /*para que el contenido crezca, si es posible*/
+        flex-shrink: 0;
+        /*para que el contenido se haga mas pequeño, si es posible*/
+        flex-basis: calc(33.3% - 1rem);
+        /*base a dividirse*/
+    }
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+    /*hace que el margen se despegue un poco del diseño de anuncio a 2 rem en todas las direcciones (arriba, abajo, izq, derecha)*/
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    /*Se pueden homologar clases con los mismo atributos solo basta separarlas con coma*/
+    margin: 0;
+}
+
+.precio {
+    color: #71b100;
+    /*color de texto*/
+    font-weight: 700;
+    /*Negritas a 700*/
+}
+
+.iconos-caracteristicas {
+    list-style: none;
+    /*elimina las viñetas dentro de la lista*/
+    padding: 0;
+    /*quita las opciones del margen*/
+    display: flex;
+    /*el div principal va a la siguiente línea, */
+    justify-content: space-evenly;
+    /*que el espacio se jsutifique de manera uniforme*/
+    flex: 1;
+    max-width: 500px;
+    /*maximo de altura 500 pixeles*/
+}
+
+.iconos-caracteristicas li {
+    display: flex;
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+    /* el contenido lo ordena al final del lado derecho*/
+}
+
+
+/************************************************ Contacto "Home" ********************************************/
+
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    /*Inserta una imagen de fondo*/
+    background-position: center;
+    /* posicion centrada*/
+    background-size: cover;
+    /*Tamaño de fondo*/
+    height: 40rem;
+    /*Altura*/
+    display: flex;
+    /*el div principal va a la siguiente línea, */
+    align-items: center;
+    /*centra todos los elementos*/
+}
+
+.contenido-contacto {
+    flex: 0 0 90%;
+    /*factor de crecimiento, detecta el tamaño disponible y lo divide entre los elementos que existen*/
+    color: white;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
+
+
+/************************************************ Seccion Inferior ********************************************/
+
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferior .blog {
+        flex-basis: 60%;
+    }
+    .seccion-inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog .imagen {
+        flex-basis: 40%;
+    }
+    .entrada-blog .texto-entrada {
+        flex-basis: calc(60% - 3rem);
+    }
+}
+
+.texto-entrada a {
+    text-decoration: none;
+    color: black;
+}
+
+.texto-entrada a:hover {
+    /*Cuando el mouse se posiciona sobre el vinculo, cambia de color*/
+    color: rgb(250, 103, 4);
+}
+
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto-entrada h4::after {
+    /*pseudoelemento la barrita verde ::after*/
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71b100;
+    margin-top: 1rem;
+}
+
+.texto-entrada span {
+    color: #E08709;
+    font-weight: 700;
+}
+
+
+/************************************************ Testimoniales ********************************************/
+
+.testimonial {
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: -2rem;
+}
+
+
+/************************************************ Footer ********************************************/
+
+.site-footer {
+    background-color: #333333;
+    margin: 0;
+}
+
+.contenedor-footer {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .site-footer nav {
+        display: block;
+    }
+}
+
+.copyright {
+    margin: 0;
+    color: white;
+}
+
+.site-footer span {
+    font-weight: 700;
+}
+
+
+/******************************************************** CCS PAGINAS INTERNAS ************************************************************/
+
+
+/************************************************ Pagina "Nosotros" ********************************************/
+
+@media (min-width: 768px) {
+    .contenedor-nosotros {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /*50% para imagen y 50% para el texto*/
+        grid-column-gap: 2rem;
+    }
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+    /*padding para el espacio entre el texto y el tamaño de este segmento*/
+}
+
+
+/************************************************ Pagina "Anuncios" ********************************************/
+
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*alinea elementos al centro*/
+}
+
+
+/************************************************ Pagina "Contacto" ********************************************/
+
+.contacto p {
+    font-size: 1.8rem;
+    color: gray;
+    margin: 0 2rem;
+}
+
+legend {
+    font-size: 2.4rem;
+    color: #649b04;
+}
+
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 700;
+    color: rgb(209, 127, 12);
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: rgb(238, 235, 235);
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    height: 20rem;
+}
+
+.forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

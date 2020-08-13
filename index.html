@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <!--Muestra el nombre del documento en la pestaña del explorador-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--"normalize" es una libreria que nos ayuda a generar estilos predeterminados que se aplicaran en cualquier navegador-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--"style" es el documento donde asignaremos nuestros propios estilos a cada elemento de este documento-->
+</head>
+
+<body>
+
+    <header class="site-header inicio">
+        <!--"header" se utiliza para el encabezado del documento-->
+        <!--la etiqueta "class" es para hacer una referencia a CSS personalizada solo para "header"-->
+        <div class="contenedor contenido-heather">
+            <div class="barra">
+                <a href="index.html">
+                    <!--"a" es para referencia un enlace, "href" es un ATRIBUTO de la etiqueta indica un vinculo a otro archivo html o pagina de internet "http://netflix.com"-->
+                    <img src="img/logo.svg" alt="Logotipo Bienes Raices">
+                    <!--"img" sirve para insertar una imagen,"src" es un ATRIBUTO y es la dirección donde esta la imagen source, "alt" es un ATRIBUTO para mostrar texto si por alguna razon no se puede mostrar la "img"-->
+                </a>
+
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="img/barras.svg" alt="Icono menu">
+                    </a>
+                </div>
+
+                <nav id="navegacion" class="navegacion">
+                    <!--"nav" para indicar un menú de navegación-->
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+
+            <h1>Ventas de Casas y Departamentos Exclusivos y de Lujo</h1>
+            <!--"h1" tamaño de texto va en orden descentente "h1","h2","h3"-->
+        </div>
+
+    </header>
+
+    <section class="contenedor seccion">
+        <!--"section" es una agrupación que muestra un cambio de contenido dentro de la pag. al que se muestra anteriormente-->
+
+        <h2 class="fw-350 centrar-texto">Más sobre nosotros</h2>
+
+        <div class="iconos-contenedor">
+            <div class="icono">
+                <!--"div" es una agrupación pequeña, una division simple dentro del "section"-->
+                <img src="img/icono1.svg" alt="Icono Seguridad">
+                <h3 class="encabezado">Seguridad</h3>
+                <!--la etiqueta "class" es para hacer una referencia a CSS personalizada solo para este "h3"-->
+                <p>Aspernatur rerum accusantium at exercitationem aliquid?
+                    <!--"p" indica un parrafo de texto, "lorem" funciona para meter texto aleatorio y mostrar el como se vería en la pagina web-->
+                    Suscipit accusantium earum quod placeat asperiores quis aliquid laborum ab et laudantium provident, molestiae voluptatibus nihil.
+                </p>
+            </div>
+
+            <div class="icono">
+                <img src="img/icono2.svg" alt="Icono Mejor Precio">
+                <h3>El Mejor Precio</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sequi sapiente ex cum vel sint soluta ab, voluptates asperiores eum, dolorem, illo atque harum totam veritatis magnam voluptatem officia. Repudiandae!
+                </P>
+            </div>
+
+            <div class="icono">
+                <img src="img/icono3.svg" alt="Icono a tiempo">
+                <h3>A Tiempo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ex, saepe aliquam suscipit mollitia commodi itaque dolores illum, optio eaque, fuga rerum officia. Doloremque molestias cumque tenetur. Voluptatem, in blanditiis.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <main class="seccion contenedor">
+
+        <!--"main" a diferencia de usar "section",  indica en html que es el contenido principal de la pagina-->
+        <!--Solo puede existir un "main" en cada pagina-->
+        <h2 class="fw-350 centrar-texto">Casas y Depas en Venta</h2>
+
+        <div class="contenedor-anuncios">
+            <div class="anuncio">
+                <!--Usamos de nuevo "div" para indicar una agrupación simple dentro del main-->
+                <img src="img/anuncio1.jpg" alt="Anuncio Casa en el Lago">
+                <div class="contenido-anuncio">
+                    <h3>Casa de Lujo en el Lago</h3>
+                    <p>Casa en el Lago con excelente vista, acabados de Lujo a un excelente precio. </p>
+                    <p class="precio">$3,000,000.00</p>
+
+                    <ul class="iconos-caracteristicas">
+                        <!--"Unorder list" / sirve para introducir una serie de elementos en una lista-->
+                        <li>
+                            <!--"li" sirve para introducir los elementos de la lista-->
+                            <img src="img/icono_wc.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono estacionamiento">
+                            <p>3</p>
+                        </li>
+
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono dormitorio">
+                            <p>3</p>
+                        </li>
+                    </ul>
+
+                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                </div>
+            </div>
+
+            <div class="anuncio">
+                <img src="img/anuncio2.jpg" alt="Anuncio Casa de Lujo">
+                <div class="contenido-anuncio">
+                    <h3>Casa terminados de Lujo</h3>
+                    <p>Casa con diseño moderno, así como tecnología inteligente y amueblada.</p>
+                    <p class="precio">$2,000,000.00</p>
+                    <ul class="iconos-caracteristicas">
+
+                        <li>
+                            <img src="img/icono_wc.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono estacionamiento">
+                            <p>3</p>
+                        </li>
+
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono dormitorio">
+                            <p>3</p>
+                        </li>
+                    </ul>
+                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                </div>
+            </div>
+
+            <div class="anuncio">
+                <img src="img/anuncio3.jpg" alt="Anuncio Casa con alberca">
+                <div class="contenido-anuncio">
+                    <h3>Casa con alberca</h3>
+                    <p>Casa con alberca y acabados de Lujo en ciudad, excelente oportunidad.</p>
+                    <p class="precio">$3,000,000.00</p>
+                    <ul class="iconos-caracteristicas">
+
+                        <li>
+                            <img src="img/icono_wc.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono estacionamiento">
+                            <p>3</p>
+                        </li>
+
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono dormitorio">
+                            <p>3</p>
+                        </li>
+                    </ul>
+                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ver-todas">
+            <a href="anuncios.html" class="boton boton-verde">Ver Todas</a>
+        </div>
+
+    </main>
+
+    <section class="imagen-contacto">
+        <!--Usamos "section" por el cambio en el contenido de la pagina-->
+        <!--"section" lo podemos identificar por el heading (encabezado) "h2"-->
+        <div class="contenedor contenido-contacto">
+            <h2>Encuentra la casa de tus sueños</h2>
+            <p>Llena el formulario y un asesor se pondra en contacto contigo a la brevedad</p>
+            <a href="contacto.html" class="boton boton-amarillo">Contactanos</a>
+        </div>
+
+    </section>
+
+    <div class="seccion-inferior contenedor">
+        <section class="blog">
+
+            <!--Usamos "section" por el cambio en el contenido de la pagina-->
+            <!--"section" lo podemos identificar por el heading (encabezado) "h2"-->
+            <h3 class="fw-350 centrar-texto">Nuestro Blog</h3>
+
+            <article class="entrada-blog">
+
+                <div class="imagen">
+                    <!--"article" es bueno utilizarlo cuando tienes una agrupación tipo blog ó foros, imagen y texto-->
+                    <img src="img/blog1.jpg" alt="Entrada de Blog">
+                </div>
+
+                <div class="texto-entrada">
+                    <a href="entrada.html">
+                        <h4>Terraza en el techo de tu casa</h4>
+                    </a>
+
+                    <p>Escrito el <span> 20/10/2019</span> por: <span> Admin </span></p>
+                    <p>Consejos para construir una terraza en el techo de tu casa, con los mejores materiales y ahorrando dinero</p>
+                </div>
+
+            </article>
+
+            <article class="entrada-blog">
+
+                <div class="imagen">
+                    <img src="img/blog2.jpg" alt="Entrada de Blog">
+                </div>
+
+                <div class="texto-entrada">
+                    <a href="entrada.html">
+                        <h4>Guía para la decoración de tu hogar</h4>
+                    </a>
+                    <p>Escrito el <span> 20/10/2019</span> por: <span> Admin </span></p>
+                    <p>Maximiza el espacio en tu hogar con esta guía, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="testimoniales">
+
+            <!--Usamos "section" por el cambio en el contenido de la pagina-->
+            <!--"section" lo podemos identificar por el heading (encabezado) "h2"-->
+            <h3 class="fw-350 centrar-texto">Testimoniales</h3>
+            <div class="testimonial">
+
+                <blockquote>
+                    <!--"blockquote" indica un texto testimonial-->
+                    El personal se comportó de una excelente forma, muy buena atención y la casa que me ofrecieron cumple con todas mis expectativas.
+                </blockquote>
+
+                <p>-Alex Montes de Oca</p>
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="site-footer seccion">
+
+        <div class="contenedor contenedor-footer">
+
+            <!--"footer" es el pie de la pagina-->
+
+            <nav class="navegacion">
+
+                <!--tenemos otra navegación la cual es importante declararla-->
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+
+            </nav>
+
+            <p class="copyright">Alejandro Montes de Oca <span>2020 &copy;</span></p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

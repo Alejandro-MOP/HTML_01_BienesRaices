@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="contenedor contenido-heather">
+            <div class="barra">
+
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="Logotipo Bienes Raices">
+                </a>
+
+
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="img/barras.svg" alt="Icono menu">
+                    </a>
+                </div>
+
+                <nav id="navegacion" class="navegacion">
+                    <!--"nav" para indicar un menú de navegación-->
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <h1 class="fw350 centrar-texto">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="Imagen Principal">
+
+    <main class="contenedor contenido-centrado">
+
+        <h2 class="fw350 centrar-texto">Llena el formulario de Contacto</h2>
+
+        <form class="contacto" action="">
+            <!--"form" sirve para ingresar formularios-->
+            <fieldset>
+                <!--"fieldset" agrupa los campos del formulario y agrega un pequeño margen-->
+                <legend>Información Personal:</legend>
+                <!--"legend" sirve para darle un encabezado a la agrupación "fieldset"-->
+                <label for="nombre">Nombre:</label> <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+                <!--"label" es la etiqueta para "input", "input" es una entrada de datos-->
+                <!--"label" tiene la propiedad "for=" la cual sirve para vincularla al "input" a travez de "id="-->
+                <!--"placeholder" sirve para mandar una alerta de que el "input" es obligatorio y no puede estar vacio-->
+                <!--"type=" es para el tipo de datos que se va a recibir-->
+                <label for="e-mail">E-mail:</label> <input type="email" id="e-mail" placeholder="Ingresa tu correo electronico" required>
+                <label for="telefono-1">Teléfono:</label> <input type="tel" id="telefono-1" placeholder="Ingresa tu teléfono" required>
+                <label for="mensaje">Mensaje:</label> <textarea id="mensaje"></textarea>
+                <!--Para una cajota de texto muy gerande se una "textarea"-->
+            </fieldset>
+
+            <fieldset>
+                <legend>Información sobre Propiedad</legend>
+                <label for="opciones">Vende o Compra:</label>
+                <select id="opciones">
+                    <!--"select" sirve para meter un combo con opciones a escoger-->
+                    <option value="" disabled selected>--Selecione--</option>
+                    <!--"option" indica el elemento que contendra el combo-->
+                    <!--"value" sera el valor que se podra leer en el backend-->
+                    <!--"disabled" y "selected" es para mostrar una opcion del combo predeterminado, pero esa estara deshabilitada-->
+                    <option value="compra">Compra</option>
+                    <option value="vende">Vende</option>
+                </select>
+                <label for="cantidad">Cantidad</label> <input type="number" min="0" max="10">
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+                <p> Como desea ser contactado:</p>
+                <div class="forma-contacto">
+                    <label for="telefono-2">Teléfono</label> <input type="radio" value="telefono" name="contacto" id="telefono-2">
+                    <!--para el input type="radio" es un boton y se agrupo con la propiedad "name" para que solopueda estar seleccionado uno-->
+                    <label for="mail-2">E-mail</label> <input type="radio" value="e-mail" name="contacto" id="mail-2">
+                </div>
+                <p>Si escogio teléfono, escoja la fecha y hora:</p>
+                <label for="fecha">Fecha:</label> <input type="date" id="fecha">
+                <label for="hora">Hora:</label> <input type="time" id="hora" min="09:00" max="18:00">
+
+
+            </fieldset>
+
+
+
+            <input type="submit" class="boton boton-verde" value="Enviar">
+
+
+
+        </form>
+
+
+
+    </main>
+
+
+
+    <footer class="site-footer seccion">
+
+        <div class="contenedor contenedor-footer">
+
+            <nav class="navegacion">
+
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+
+            </nav>
+
+            <p class="copyright">Alejandro Montes de Oca <span>2020 &copy;</span></p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
